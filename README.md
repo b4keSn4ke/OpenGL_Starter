@@ -1,8 +1,8 @@
 # OpenGL Starter
 
-This project aims to kickstart OpenGL projects with GLFW a bit more quickly than setting up everything manually from scratch (I am lazy so that explains why). It is a simple application that includes the example code from [GLFW's Web site](https://www.glfw.org/documentation.html) 
+This project aims to kickstart OpenGL projects with GLFW and GLAD a bit more quickly than setting up everything manually from scratch (I am lazy so that explains why). It is a simple application that includes the example code from [GLFW's Web site](https://www.glfw.org/documentation.html) 
 
-GLFW is already added as a submodule and will be fetched from Git by running `configure.sh` or `cmake -S . -B build/;`.
+GLAD is already included in the project and GLFW is added as a submodule and will be fetched from Git by running `configure.sh` or `cmake -S . -B build/;`.
 
 ## Building OpenGL Starter
 

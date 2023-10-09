@@ -9,11 +9,17 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 find_package(OpenGL REQUIRED)
 
+add_subdirectory(vendor/glad)
 add_subdirectory(vendor/glfw)
 
-include_directories(${OPENGL_INCLUDE_DIR})
+include_directories(
+  ${OPENGL_INCLUDE_DIR} # libGL is already included with GLAD
+)
 
-add_executable(${PROJECT_NAME} Application.cpp)
+
+add_executable(${PROJECT_NAME} 
+  src/Application.cpp
+)
 
 # Verify if host has Git installed and then proceed to fetchthe submodules on Git
 find_package(Git QUIET)
@@ -37,13 +43,28 @@ endif()
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC vendor/glfw/include
+    PUBLIC vendor/glad/include
 )
 
 target_link_directories(${PROJECT_NAME}
     PRIVATE vendor/glfw/src
+    PRIVATE vendor/glad/src
 )
 
 target_link_libraries(${PROJECT_NAME}
-    OpenGL::GL
-    glfw
+    PUBLIC OpenGL::GL # libGL is already included with GLAD
+    PUBLIC glfw
+    PUBLIC glad
 )
+
+#target_include_directories(${PROJECT_NAME}
+#    PUBLIC vendor/glad/include/glad
+#)
+#
+#target_link_directories(${PROJECT_NAME}
+#    PRIVATE vendor/glad/src
+#)
+#
+#target_link_libraries(${PROJECT_NAME}
+#    PRIVATE glad
+#)
