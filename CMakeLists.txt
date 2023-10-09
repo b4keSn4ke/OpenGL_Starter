@@ -9,16 +9,8 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 find_package(OpenGL REQUIRED)
 
-add_subdirectory(vendor/glad)
-add_subdirectory(vendor/glfw)
-
 include_directories(
   ${OPENGL_INCLUDE_DIR} # libGL is already included with GLAD
-)
-
-
-add_executable(${PROJECT_NAME} 
-  src/Application.cpp
 )
 
 # Verify if host has Git installed and then proceed to fetchthe submodules on Git
@@ -40,6 +32,13 @@ endif()
 if(NOT EXISTS "${PROJECT_SOURCE_DIR}/vendor/glfw/CMakeLists.txt")
     message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
 endif()
+
+add_subdirectory(vendor/glad)
+add_subdirectory(vendor/glfw)
+
+add_executable(${PROJECT_NAME} 
+  src/Application.cpp
+)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC vendor/glfw/include
