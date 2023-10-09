@@ -56,15 +56,3 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC glfw
     PUBLIC glad
 )
-
-#target_include_directories(${PROJECT_NAME}
-#    PUBLIC vendor/glad/include/glad
-#)
-#
-#target_link_directories(${PROJECT_NAME}
-#    PRIVATE vendor/glad/src
-#)
-#
-#target_link_libraries(${PROJECT_NAME}
-#    PRIVATE glad
-#)
