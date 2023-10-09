@@ -36,7 +36,7 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/vendor/glfw/CMakeLists.txt")
 endif()
 
 target_include_directories(${PROJECT_NAME}
-  PUBLIC vendor/glfw/include
+    PUBLIC vendor/glfw/include
 )
 
 target_link_directories(${PROJECT_NAME}
