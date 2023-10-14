@@ -2,8 +2,15 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#if DEBUG_MODE == 1
+#define LOG(x) std::cout<<x<<std::endl;
+#else
+#define LOG(x)
+#endif
+
 int main(void)
 {
+    LOG("Running in Debug Mode");
     GLFWwindow* window;
 
 /* Initialize the library */
