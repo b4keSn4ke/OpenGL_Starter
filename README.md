@@ -7,7 +7,7 @@ OpenGL_Starter comes with a simple application that includes the example code fr
 
 ## Building OpenGL Starter
 
-We first need to clone the repo, create a build folder inside the project's folder and give the following script execution rights. 
+We first need to clone the repo, create a build folder inside the project's folder and give the following scripts execution rights. 
 ```
 git clone https://github.com/b4keSn4ke/OpenGL_Starter.git;
 cd OpenGL_Starter;
@@ -24,9 +24,9 @@ You can then use the `configure.sh` script to generate the project with its depe
 ./run.sh
 ```
 
-By default the `configure.sh` scripts sets the DEBUG_MODE flag to ON, which could be used via the pre-processor in your C++ code.
+By default the `configure.sh` scripts sets the `DEBUG_MODE` flag to `ON`, which could be used via the pre-processor in your C++ code.
 
-If you prefer not runnin in DEBUG_MODE, you can simply uncomment the following line in `configure.sh`:
+If you prefer not runnin in `DEBUG_MODE`, you can simply uncomment the following line in `configure.sh`:
 
 ```
 #!/usr/bin/bash
