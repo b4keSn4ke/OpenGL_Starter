@@ -19,7 +19,7 @@ chmod +x run.sh configure.sh build.sh;
 You can then use the `configure.sh` script to generate the project with its dependencies and use the other scripts in order to build and run the project.
 By default the `configure.sh` scripts sets the `DEBUG_MODE` flag to `OFF`, setting it to `ON` would allow you to use the `DEBUG_MODE` define via the pre-processor in your C++ code.
 
-To generate the project with `DEBUG_MODE` set to `ON`, simply add the DEBUG argument to the `configure.sh` script.
+To generate the project with `DEBUG_MODE` set to `ON`, simply add the `DEBUG` argument to the `configure.sh` script.
 
 ```
 ./configure.sh DEBUG
