@@ -11,7 +11,7 @@ We first need to clone the repo, create a build folder inside the project's fold
 ```
 git clone https://github.com/b4keSn4ke/OpenGL_Starter.git;
 cd OpenGL_Starter;
-mkdir build
+mkdir build;
 
 chmod +x run.sh configure.sh build.sh;
 ```
@@ -22,20 +22,19 @@ By default the `configure.sh` scripts sets the `DEBUG_MODE` flag to `OFF`, setti
 To generate the project with `DEBUG_MODE` set to `ON`, simply add the `DEBUG` argument to the `configure.sh` script.
 
 ```
-./configure.sh DEBUG
+./configure.sh DEBUG;
 ```
 
 If you don't want to generate the project in `DEBUG_MODE`, simply run `configure.sh`
 ```
-./configure.sh
+./configure.sh;
 ```
 
 After having generated your project, simply run `build.sh` to build the project and `run.sh` to run your project.
 
 ```
-./configure.sh;
-./build.sh
-./run.sh
+./build.sh;
+./run.sh;
 ```
 
 ## Additional Submodules
@@ -43,7 +42,7 @@ After having generated your project, simply run `build.sh` to build the project 
 You can add addtional submodules in the folder created for this effect (`vendor`) by typing the following command
 
 ```
-git submodule add https://github.com/[USER]/[GITREPO].git vendor/[SUBMODULE_NAME]
+git submodule add https://github.com/[USER]/[GITREPO].git vendor/[SUBMODULE_NAME];
 ```
 
 Make sure to commit your change after having added a submodule.
