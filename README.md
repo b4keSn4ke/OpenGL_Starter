@@ -37,7 +37,7 @@ After having generated your project, simply run `build.sh` to build the project 
 ```
 
 You can also format your C++ code following the standards defined in the `.clang-format` file by using the `format.sh` script.
-The script will format every header (.h) and source (.cpp) files in the src/ and include/ folders.
+The script will format every header (.h) and source (.cpp) files in the `src/` and `include/` directories.
 
 ```
 ./format.sh
