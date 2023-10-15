@@ -13,7 +13,7 @@ git clone https://github.com/b4keSn4ke/OpenGL_Starter.git;
 cd OpenGL_Starter;
 mkdir build;
 
-chmod +x run.sh configure.sh build.sh;
+chmod +x run.sh configure.sh build.sh format.sh;
 ```
 
 You can then use the `configure.sh` script to generate the project with its dependencies and use the other scripts in order to build and run the project.
@@ -31,10 +31,16 @@ If you don't want to generate the project in `DEBUG_MODE`, simply run `configure
 ```
 
 After having generated your project, simply run `build.sh` to build the project and `run.sh` to run your project.
-
 ```
 ./build.sh;
 ./run.sh;
+```
+
+You can also format your C++ code following the standards defined in the `.clang-format` file by using the `format.sh` script.
+The script will format every header (.h) and source (.cpp) files in the src/ and include/ folders.
+
+```
+./format.sh
 ```
 
 ## Additional Submodules
